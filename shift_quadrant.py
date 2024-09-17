@@ -28,7 +28,7 @@ def assign_init_shifts(quadrant=None, rotation=None):
     for i, persona in enumerate(quadrant.index.tolist()):
         # Redimensionar la rotación para cubrir todos los días del mes y asignar a cada persona
         turnos_persona = np.resize(rotation, len(quadrant.columns))
-        quadrant.loc[persona] = np.roll(turnos_persona, i * 6)  # Desplazar el ciclo para cada persona
+        quadrant.loc[persona] = np.roll(turnos_persona, i * 7)  # Desplazar el ciclo para cada persona
 
 
 def day_min_shifts(quadrant):
